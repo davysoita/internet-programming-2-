@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .calc-error { color: rgb(0, 255, 76); }
+        .calc-results { color: rgb(83, 138, 11); }
+    </style>
+
+</head>
+<body style="background-color: rgb(24, 192, 52);">
+    
+<form action="assign.php" method="post">
+    <input type="number" name="num1" placeholder="First Number" step="any" required>
+    <select name="operator">
+        <option value="add">+</option>
+        <option value="subtract">-</option>
+        <option value="multiply">*</option>
+        <option value="divide">/</option>
+        <option value="exponentiation">^</option>
+        <option value="percentage">%</option>
+        <option value="squareroot">sqrt</option>
+        <option value="modulus">mod</option>
+    </select>
+    <input type="number" name="num2" placeholder="Second Number" step="any" required>
+    <button type="submit">Calculate</button>
+    <p>$echo "<p class='calc-results'>Result = " . $value . "</p>";</p>
+</form>
+</body>
+</html>
